@@ -9,7 +9,7 @@ GymPass style app.
 - [ ] Deve ser possível obter o perfil de um usuário logado;
 - [ ] Deve ser possível obter o número de check-ins realizados pelo usuário logado;
 - [ ] Deve ser possível o usuário obter seu hitórioco de check-ins;
-- [ ] Deve ser possível o usuário buscar academias próximas;
+- [ ] Deve ser possível o usuário buscar _academias_ próximas;
 - [ ] Deve ser possível o usuário buscar academias pelo nome;
 - [ ] Deve ser possível o usuário realizar check-in em uma academia;
 - [ ] Deve ser possível validar o check-in de um usuário;
@@ -23,7 +23,7 @@ GymPass style app.
 - [ ] O check-in só pode ser validado até 20 minutos após criado;
 - [ ] O check-in só pode ser validado por administradores;
 - [ ] A academia só pode ser cadastrada por administradores;
- 
+
 ## RNFs (Requisitos não-funcionais)
 
 - [ ] A senha do usuário deve ser criptografada;
