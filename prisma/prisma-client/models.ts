@@ -8,5 +8,7 @@
  *
  * 🟢 You can import this file directly.
  */
-export type * from './models/User.js'
-export type * from './commonInputTypes.js'
+export type * from './models/User'
+export type * from './models/CheckIn'
+export type * from './models/Gym'
+export type * from './commonInputTypes'
