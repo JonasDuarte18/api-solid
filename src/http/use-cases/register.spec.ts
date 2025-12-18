@@ -6,8 +6,8 @@ import { UserAlreadyExistsError } from './errors/user-already-exists-error'
 
 describe('Register Use Case', () => {
   it('should be able to register', async () => {
-    const UsersRepository = new InMemoryUsersRepository()
-    const registerUseCase = new RegisterUseCase(UsersRepository)
+    const usersRepository = new InMemoryUsersRepository()
+    const registerUseCase = new RegisterUseCase(usersRepository)
 
     const { user } = await registerUseCase.execute({
       name: 'Jons Doe',
@@ -19,8 +19,8 @@ describe('Register Use Case', () => {
   })
 
   it('should hash user password upon resgistration', async () => {
-    const UsersRepository = new InMemoryUsersRepository()
-    const registerUseCase = new RegisterUseCase(UsersRepository)
+    const usersRepository = new InMemoryUsersRepository()
+    const registerUseCase = new RegisterUseCase(usersRepository)
 
     const { user } = await registerUseCase.execute({
       name: 'Jons Doe',
@@ -34,8 +34,8 @@ describe('Register Use Case', () => {
   })
 
   it('should not be able to register with same email twice', async () => {
-    const UsersRepository = new InMemoryUsersRepository()
-    const registerUseCase = new RegisterUseCase(UsersRepository)
+    const usersRepository = new InMemoryUsersRepository()
+    const registerUseCase = new RegisterUseCase(usersRepository)
 
     const email = 'johndoe3@example.com'
 
