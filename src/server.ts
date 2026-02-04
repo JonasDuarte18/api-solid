@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import { app } from './app.js'
 import { env } from './env/index.js'
 
@@ -8,5 +9,7 @@ app
   })
   .then(() => {
     console.clear()
-    console.log('🚀 HTTP server running!')
+    console.log(
+      `🚀 HTTP server running! ${chalk.blue('http://localhost:3333')}`,
+    )
   })
