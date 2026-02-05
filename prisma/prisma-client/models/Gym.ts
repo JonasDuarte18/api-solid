@@ -27,13 +27,13 @@ export type AggregateGym = {
 }
 
 export type GymAvgAggregateOutputType = {
-  latitude: number | null
-  longitude: number | null
+  latitude: runtime.Decimal | null
+  longitude: runtime.Decimal | null
 }
 
 export type GymSumAggregateOutputType = {
-  latitude: number | null
-  longitude: number | null
+  latitude: runtime.Decimal | null
+  longitude: runtime.Decimal | null
 }
 
 export type GymMinAggregateOutputType = {
@@ -41,8 +41,8 @@ export type GymMinAggregateOutputType = {
   title: string | null
   description: string | null
   phone: string | null
-  latitude: number | null
-  longitude: number | null
+  latitude: runtime.Decimal | null
+  longitude: runtime.Decimal | null
 }
 
 export type GymMaxAggregateOutputType = {
@@ -50,8 +50,8 @@ export type GymMaxAggregateOutputType = {
   title: string | null
   description: string | null
   phone: string | null
-  latitude: number | null
-  longitude: number | null
+  latitude: runtime.Decimal | null
+  longitude: runtime.Decimal | null
 }
 
 export type GymCountAggregateOutputType = {
@@ -194,8 +194,8 @@ export type GymGroupByOutputType = {
   title: string
   description: string | null
   phone: string | null
-  latitude: number
-  longitude: number
+  latitude: runtime.Decimal
+  longitude: runtime.Decimal
   _count: GymCountAggregateOutputType | null
   _avg: GymAvgAggregateOutputType | null
   _sum: GymSumAggregateOutputType | null
@@ -226,8 +226,8 @@ export type GymWhereInput = {
   title?: Prisma.StringFilter<"Gym"> | string
   description?: Prisma.StringNullableFilter<"Gym"> | string | null
   phone?: Prisma.StringNullableFilter<"Gym"> | string | null
-  latitude?: Prisma.FloatFilter<"Gym"> | number
-  longitude?: Prisma.FloatFilter<"Gym"> | number
+  latitude?: Prisma.DecimalFilter<"Gym"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude?: Prisma.DecimalFilter<"Gym"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   checkIns?: Prisma.CheckInListRelationFilter
 }
 
@@ -249,8 +249,8 @@ export type GymWhereUniqueInput = Prisma.AtLeast<{
   title?: Prisma.StringFilter<"Gym"> | string
   description?: Prisma.StringNullableFilter<"Gym"> | string | null
   phone?: Prisma.StringNullableFilter<"Gym"> | string | null
-  latitude?: Prisma.FloatFilter<"Gym"> | number
-  longitude?: Prisma.FloatFilter<"Gym"> | number
+  latitude?: Prisma.DecimalFilter<"Gym"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude?: Prisma.DecimalFilter<"Gym"> | runtime.Decimal | runtime.DecimalJsLike | number | string
   checkIns?: Prisma.CheckInListRelationFilter
 }, "id">
 
@@ -276,8 +276,8 @@ export type GymScalarWhereWithAggregatesInput = {
   title?: Prisma.StringWithAggregatesFilter<"Gym"> | string
   description?: Prisma.StringNullableWithAggregatesFilter<"Gym"> | string | null
   phone?: Prisma.StringNullableWithAggregatesFilter<"Gym"> | string | null
-  latitude?: Prisma.FloatWithAggregatesFilter<"Gym"> | number
-  longitude?: Prisma.FloatWithAggregatesFilter<"Gym"> | number
+  latitude?: Prisma.DecimalWithAggregatesFilter<"Gym"> | runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude?: Prisma.DecimalWithAggregatesFilter<"Gym"> | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type GymCreateInput = {
@@ -285,8 +285,8 @@ export type GymCreateInput = {
   title: string
   description?: string | null
   phone?: string | null
-  latitude: number
-  longitude: number
+  latitude: runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude: runtime.Decimal | runtime.DecimalJsLike | number | string
   checkIns?: Prisma.CheckInCreateNestedManyWithoutGymInput
 }
 
@@ -295,8 +295,8 @@ export type GymUncheckedCreateInput = {
   title: string
   description?: string | null
   phone?: string | null
-  latitude: number
-  longitude: number
+  latitude: runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude: runtime.Decimal | runtime.DecimalJsLike | number | string
   checkIns?: Prisma.CheckInUncheckedCreateNestedManyWithoutGymInput
 }
 
@@ -305,8 +305,8 @@ export type GymUpdateInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  latitude?: Prisma.FloatFieldUpdateOperationsInput | number
-  longitude?: Prisma.FloatFieldUpdateOperationsInput | number
+  latitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   checkIns?: Prisma.CheckInUpdateManyWithoutGymNestedInput
 }
 
@@ -315,8 +315,8 @@ export type GymUncheckedUpdateInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  latitude?: Prisma.FloatFieldUpdateOperationsInput | number
-  longitude?: Prisma.FloatFieldUpdateOperationsInput | number
+  latitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
   checkIns?: Prisma.CheckInUncheckedUpdateManyWithoutGymNestedInput
 }
 
@@ -325,8 +325,8 @@ export type GymCreateManyInput = {
   title: string
   description?: string | null
   phone?: string | null
-  latitude: number
-  longitude: number
+  latitude: runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type GymUpdateManyMutationInput = {
@@ -334,8 +334,8 @@ export type GymUpdateManyMutationInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  latitude?: Prisma.FloatFieldUpdateOperationsInput | number
-  longitude?: Prisma.FloatFieldUpdateOperationsInput | number
+  latitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type GymUncheckedUpdateManyInput = {
@@ -343,8 +343,8 @@ export type GymUncheckedUpdateManyInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  latitude?: Prisma.FloatFieldUpdateOperationsInput | number
-  longitude?: Prisma.FloatFieldUpdateOperationsInput | number
+  latitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type GymScalarRelationFilter = {
@@ -407,12 +407,12 @@ export type NullableStringFieldUpdateOperationsInput = {
   set?: string | null
 }
 
-export type FloatFieldUpdateOperationsInput = {
-  set?: number
-  increment?: number
-  decrement?: number
-  multiply?: number
-  divide?: number
+export type DecimalFieldUpdateOperationsInput = {
+  set?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  increment?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  decrement?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  multiply?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  divide?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type GymCreateWithoutCheckInsInput = {
@@ -420,8 +420,8 @@ export type GymCreateWithoutCheckInsInput = {
   title: string
   description?: string | null
   phone?: string | null
-  latitude: number
-  longitude: number
+  latitude: runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type GymUncheckedCreateWithoutCheckInsInput = {
@@ -429,8 +429,8 @@ export type GymUncheckedCreateWithoutCheckInsInput = {
   title: string
   description?: string | null
   phone?: string | null
-  latitude: number
-  longitude: number
+  latitude: runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type GymCreateOrConnectWithoutCheckInsInput = {
@@ -454,8 +454,8 @@ export type GymUpdateWithoutCheckInsInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  latitude?: Prisma.FloatFieldUpdateOperationsInput | number
-  longitude?: Prisma.FloatFieldUpdateOperationsInput | number
+  latitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 export type GymUncheckedUpdateWithoutCheckInsInput = {
@@ -463,8 +463,8 @@ export type GymUncheckedUpdateWithoutCheckInsInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  latitude?: Prisma.FloatFieldUpdateOperationsInput | number
-  longitude?: Prisma.FloatFieldUpdateOperationsInput | number
+  latitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
+  longitude?: Prisma.DecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
 
@@ -554,8 +554,8 @@ export type $GymPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
     title: string
     description: string | null
     phone: string | null
-    latitude: number
-    longitude: number
+    latitude: runtime.Decimal
+    longitude: runtime.Decimal
   }, ExtArgs["result"]["gym"]>
   composites: {}
 }
@@ -984,8 +984,8 @@ export interface GymFieldRefs {
   readonly title: Prisma.FieldRef<"Gym", 'String'>
   readonly description: Prisma.FieldRef<"Gym", 'String'>
   readonly phone: Prisma.FieldRef<"Gym", 'String'>
-  readonly latitude: Prisma.FieldRef<"Gym", 'Float'>
-  readonly longitude: Prisma.FieldRef<"Gym", 'Float'>
+  readonly latitude: Prisma.FieldRef<"Gym", 'Decimal'>
+  readonly longitude: Prisma.FieldRef<"Gym", 'Decimal'>
 }
     
 
